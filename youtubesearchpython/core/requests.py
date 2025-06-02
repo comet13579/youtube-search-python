@@ -22,7 +22,6 @@ class RequestCore:
             headers={"User-Agent": userAgent},
             json=self.data,
             timeout=self.timeout,
-            proxies=self.proxy
         )
 
     async def asyncPostRequest(self) -> httpx.Response:

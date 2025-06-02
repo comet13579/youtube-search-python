@@ -1,5 +1,15 @@
 # [youtube-search-python](https://github.com/alexmercerind/youtube-search-python)
 
+##### update: 2025-06-03 by Comet13579: Due to some reasons, there were a bug which leds to the package not functioning properly. It has been fixed by deleting one line of code in requests.py. The modified code snippet is in the following.
+```python
+    def syncPostRequest(self) -> httpx.Response:
+        return httpx.post(
+            self.url,
+            headers={"User-Agent": userAgent},
+            json=self.data,
+            timeout=self.timeout,
+        )
+```
 ##### Search for YouTube videos, channels & playlists. Get video & playlist information using link. Get search suggestions. WITHOUT YouTube Data API v3.
 
 ## There are no active project maintainers since 23rd June 2022. Details: [Here](https://github.com/alexmercerind/youtube-search-python/issues/189)
@@ -2397,6 +2407,8 @@ Contributors are added irrespective of order.
 ## License
 
 MIT License
+
+Copyright (c) 2025 [Wong Sonny](https://github.com/comet13579)
 
 Copyright (c) 2021 [Hitesh Kumar Saini](https://github.com/alexmercerind)
 
